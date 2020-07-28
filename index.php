@@ -73,7 +73,7 @@ if ($xml) {
           'post_category'  => array($config__category_id),
           'post_status'    => 'publish',
           'post_title'     => wp_strip_all_tags((string)$title),
-          'post_content'   => $url,
+          'post_content'   => (string)$url,
           'post_type'      => 'post'
         );
 
