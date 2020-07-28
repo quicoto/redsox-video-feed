@@ -2,7 +2,7 @@
 // ========================================
 // CONFIGURATION
 // ========================================
-$config__channel_id = "UCoLrcjPV5PbUrUyXq5mjc_A";
+$config__channel_id = "UCB7VFqP4qJd3ST4PjMEzApA";
 $config__meta_key = "redsox_video_id";
 $config__author_id = 1;
 $config__category_id = 1611;
@@ -27,7 +27,7 @@ if ($xml) {
     $entry = $xml->entry[$i];
 
     // Look for these 2 strings in the title
-    $isFound = preg_match('/\bCondensed\b.*\bBOS\b/', $entry->title, $matches);
+    $isFound = preg_match('/\bCondensed\b.*\bRed Sox\b/', $entry->title, $matches);
 
     if ($isFound) {
       $entry_id = $entry->id;
