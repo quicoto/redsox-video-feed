@@ -71,15 +71,13 @@ if ($xml) {
         $post = array(
           'post_author'    => $config__author_id,
           'post_category'  => array($config__category_id),
-          'post_date'      =>  $post_date,
-          'post_date_gmt'  =>  $post_date,
           'post_status'    => 'publish',
-          'post_title'     => (string)$title,
+          'post_title'     => wp_strip_all_tags((string)$title),
           'post_content'   => $url,
           'post_type'      => 'post'
         );
 
-        $post_id = wp_insert_post( $post , $error);
+        $post_id = wp_insert_post( $post );
 
         update_post_meta($post_id, $config__meta_key, (string)$entry_id);
 
