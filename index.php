@@ -27,7 +27,7 @@ if ($xml) {
     $entry = $xml->entry[$i];
 
     // Look for these 2 strings in the title
-    $isFound = preg_match('/\bCondensed\b.*\bRed Sox\b/', $entry->title, $matches);
+    $isFound = preg_match('/^.*?(?:\b|_)(Condensed(?:\b|_).*?(?:\b|_)Red Sox|Red Sox(?:\b|_).*?(?:\b|_)Condensed)(?:\b|_).*?$/', $entry->title, $matches);
 
     if ($isFound) {
       $entry_id = $entry->id;
